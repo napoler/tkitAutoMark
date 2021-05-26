@@ -1,36 +1,20 @@
-# 一个创建库的demo
-便于快速创建自己的第三方库
+# tkitAutoMark
+自动标注工具
 
-## 快速上传操作
-可以自动查找依赖，然后上传
-```
-sh upload.sh
-```
+尝试解决长文本标注问题
+## 安装
 
-文档查看
-https://www.terrychan.org/python_libs_demo/
-
-
-更多开发说明参考这里 https://python-packaging-zh.readthedocs.io/zh_CN/latest/minimal.html
-
-
-## 如何向PyPi(pip)提交模块
-
-https://www.notion.so/terrychanorg/PyPi-pip-b371898f30ec4f268688edebab8d7ba1
-
-## 提交到anaconda
-
-https://docs.anaconda.com/anacondaorg/user-guide/tasks/work-with-packages/
-
-
-##  MANIFEST.in 文件
-
- MANIFEST.in 文件，文件内容就是需要包含在分发包中的文件。一个 MANIFEST.in 文件如下：
-
-```
-include *.txt
-recursive-include examples *.txt *.py
-prune examples/sample?/build
+``` 
+pip install tkitAutoMark
 ```
 
-MANIFEST.in 文件的编写规则可参考：https://docs.python.org/3.6/distutils/sourcedist.html
+使用
+
+```
+
+from tkitAutoMark import AutoMark
+tModel=AutoMark(learning_rate=5e-5,num_labels=5,dim=128)
+tModel
+
+```
+

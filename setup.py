@@ -28,21 +28,25 @@ def read_requirements(filename):
 
 long_description=read_file("README.md")
 setup(
-    name='tkitDemo', #修改包名字-
-    version='0.0.0.2                                 ',
-    description='Terry toolkit tkitDemo',
+    name='tkitAutoMark', #修改包名字-
+    version='0.0.0.1.4',
+    description='Terry toolkit tkitAutoMark',
     author='Terry Chan',
     author_email='napoler2008@gmail.com',
-    url='http://www.terrychan.org/python_libs_demo/',
-    install_requires=read_requirements('requirements.txt'),  # 指定需要安装的依赖
+    url='https://github.com/napoler/tkitAutoMark-pytorch',
+    # install_requires=read_requirements('requirements.txt'),  # 指定需要安装的依赖
     long_description=long_description,
     long_description_content_type="text/markdown",
-    # install_requires=[
-    #     # 'beautifulsoup4==4.7.1',
-
-
-    # ],
-    packages=['Demo'])
+    install_requires=[
+        'pytorch-lightning>=1.2.10',
+        'pytorch-crf>=0.7.2',
+        'performer-pytorch>=1.0.11',
+        'tkit-transformer-xl>=0.0.0.6',
+        'tkit-mlp-pytorch>=0.0.0.1',
+        'memory-transformer-xl>=0.1.0',
+        'tkitbilstm>=0.0.0.1.1'
+    ],
+    packages=['tkitAutoMark'])
 
 """
 pip freeze > requirements.txt
